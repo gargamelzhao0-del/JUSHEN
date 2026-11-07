@@ -1,0 +1,51 @@
+network:
+  jetson_ip: "0.0.0.0"
+  tcp_port: 9999
+  connection_timeout: 30.0
+  reconnect_interval: 2.0
+
+motor:
+  num_motors: 12
+  position_min: 0.0
+  position_max: 358.0
+  velocity_max: 500.0
+  current_max: 10.0
+  temperature_max: 70.0
+
+safety:
+  position_limits: [30.0, 330.0]
+  velocity_limit: 400.0
+  current_limit: 8.0
+  temperature_limit: 65.0
+  voltage_min: 20.0
+  voltage_max: 29.4
+  tilt_angle_max: 45.0
+  communication_timeout: 0.5
+  emergency_stop_enabled: true
+
+control:
+  control_frequency: 50.0
+  action_scale: 1.0
+  action_clip: 50.0
+  smoothing_enabled: true
+  smoothing_factor: 0.3
+  default_posture_blend: 0.1
+
+imu:
+  enabled: false
+  use_ros2: true
+  topic: "/imu/data_raw"
+  frame_id: "gyro_link"
+  serial_port: "/dev/ttyACM0"
+  baud_rate: 921600
+
+policy:
+  model_path: ""
+  model_type: "pytorch"
+  observation_dim: 48
+  action_dim: 12
+  history_length: 1
+  clip_actions: true
+
+debug_mode: false
+log_level: "INFO"

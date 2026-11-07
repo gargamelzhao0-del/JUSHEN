@@ -1,0 +1,35 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Machine-local assistant settings and workspace data
+**/.claude/settings.local.json
+/.qoder/
+/.trae/
+
+# Keil generated outputs and per-user UI state
+/MDK-ARM/JUSHEN/
+/JUSHEN_stm32f4/MDK-ARM/JUSHEN_stm32f4/
+*.uvguix.*
+*.uvgui.*
+*.uvprojx.bak
+*.uvoptx.bak
+*.dep
+*.lst
+*.lnp
+*.build_log.htm
+
+# ROS / colcon generated workspaces
+/quadruped_control/imu/**/build/
+/quadruped_control/imu/**/install/
+/quadruped_control/imu/**/devel/
+/quadruped_control/imu/**/log/
+
+# Runtime logs
+*.log
+/quadruped_control/logs/
